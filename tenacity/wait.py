@@ -92,7 +92,7 @@ class wait_chain(wait_base):
 
         @retry(wait=wait_chain(*[wait_fixed(1) for i in range(3)] +
                                [wait_fixed(2) for j in range(5)] +
-                               [wait_fixed(5) for k in range(4)))
+                               [wait_fixed(5) for k in range(4)]))
         def wait_chained():
             print("Wait 1s for 3 attempts, 2s for 5 attempts and 5s
                    thereafter.")
